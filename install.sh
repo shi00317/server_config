@@ -1,5 +1,21 @@
 #!/bin/bash
 
+# Function to print a sentence with a border of '#' symbols
+print_bordered_message() {
+    local message=$1
+    local length=${#message}
+    local border=$(printf '#%.0s' $(seq 1 $((length + 8))))
+
+    echo "$border"
+    echo "###  $message  ###"
+    echo "$border"
+}
+
+# Example usage
+print_bordered_message "Tmux: run prefix+I for active tmux plugin. 
+Vim: type :+PlugInstall for active vim plugin."
+
+
 # tmux config setup
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp .tmux.conf $(echo $HOME)
