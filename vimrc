@@ -23,9 +23,9 @@ set incsearch
 set smartcase
 
 
-
-noremap j k
-noremap k j
+# # remap key j to k; k to j
+# noremap j k
+# noremap k j
 
 map s <nop>
 map S :w<CR>
